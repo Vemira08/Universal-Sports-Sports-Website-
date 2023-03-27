@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="query" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>Universal Sports</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="icon" href="images/logo-3.png">
+        <style>
+            input[type=text], [type=email], select, textarea {
+                width: 93%;
+                padding: 12px; 
+                border: 1px solid rgb(255, 255, 255); 
+                border-radius: 4px; 
+                box-sizing: content-box; 
+                margin-top: 6px; 
+                margin-bottom: 16px; 
+                resize: vertical 
+            }
+            
+            input[type=button], [type=submit] {
+                background-color: #04AA6D;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=button]:hover, [type=submit]:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var content = {};
+            document.addEventListener("DOMContentLoaded", function() {
+                content.fname = document.getElementById("fname");
+                content.lname = document.getElementById("lname");
+                content.email = document.getElementById("email");
+                content.query = document.getElementById("query");
+            })
+
+            class QueryData {
+                constructor(fname, lname, query, email, theme) {
+                    this.fname = fname;
+                    this.lname = lname;
+                    this.query = query;
+                    this.email = email;
+                    this.theme = theme;
+                }
+            }
+
+            function getSubject() {
+                if (document.getElementById("sport").checked) {
+                    return "Regarding Sports";
+                }
+                else if (document.getElementById("commerce").checked) {
+                    return "Regarding E-Commerce";
+                }
+                else if (document.getElementById("website").checked) {
+                    return "Regarding our Website";
+                }
+                else {
+                    return "";
+                }
+            }
+
+            function isNotEmpty(value) {
+                if (value == null || typeof value == 'undefined' ) return false;
+                return (value.length > 0);
+            }
+
+            function isEmail(email) {
+                let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+                return regex.test(String(email).toLowerCase());
+            }
+
+            function contentValidation(content, validationFunction) {
+                if (content == null) return false;
+                    let iscontentValid = validationFunction(content.value)
+
+                if (!iscontentValid) {
+                    content.className = 'alertRed';
+
+                } else {
+                    content.className = '';
+                }
+                return iscontentValid;
+            }
+
+            function isValid() {
+                var valid = true;
+                
+                valid &= contentValidation(content.fname, isNotEmpty);
+                valid &= contentValidation(content.lname, isNotEmpty);
+                valid &= contentValidation(content.email, isEmail);
+                valid &= contentValidation(content.query, isNotEmpty);
+                valid &= (!theme == "");
+
+                return valid;
+            }
+
+            function editQuery() {
+                document.getElementById("initial").className = "show";
+                document.getElementById("replacement").className = "hide";
+            }
+
+            function sendQuery() {
+                document.getElementById("replacement").className = "hide";
+                document.getElementById("initial").className = "hide";
+                document.getElementById("success").className = "show";
+            }
+
+            function viewQuery() {
+                theme = getSubject();
+                if (theme == "") {
+                    alert("Please choose a query subject!");
+                }
+
+                if (contentValidation(content.fname, isNotEmpty) == false) {
+                    alert("Please fill in your first name!")
+                }
+
+                if (contentValidation(content.lname, isNotEmpty) == false) {
+                    alert("Please fill in your last name!")
+                }
+
+                if (contentValidation(content.email, isNotEmpty) == false) {
+                    alert("Please fill in your email!")
+                }
+
+                if (contentValidation(content.email, isEmail) == false) {
+                    alert("Please enter a valid email")
+                }
+
+                if (contentValidation(content.query, isNotEmpty) == false) {
+                    alert("Please fill in your query")
+                }
+   
+                if (isValid()) {
+                    let inquiry = new QueryData(fname.value, lname.value, query.value, email.value, theme);
+                    document.getElementById("review1").innerHTML = ("Name: " + inquiry.fname + " " + inquiry.lname);
+                    document.getElementById("review2").innerHTML = ("Email: " + inquiry.email);
+                    document.getElementById("review3").innerHTML = ("Query Subject: " + theme);
+                    document.getElementById("review4").innerHTML = ("Details of Query: " + inquiry.query);
+                    document.getElementById("initial").className = "hide";
+                    document.getElementById("replacement").className = "show";
+                    
+                }
+            }
+        </script>
+        
+        <div class="contentSpacer">
+            <h1>Welcome to Universal Sports</h1>
+        </div>
+    
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="query.html" class="active">Query</a></li>
+                <li><a href="buyproducts.html">Buy-Products</a></li>
+                <li><a href="Sitemap.html">Site-Map</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="Thumbnailimage.html">Thumbnail-Images</a></li>
+                <li><a href="StudentDetails.html">Student</a></li>
+            </ul>
+        </div>
+
+        <div class="contentSpacer">
+            <h2>Query Form</h2><br>
+            <p>If you have any problems regarding information on our website, sports or the products we sell please feel free to submit a query so we can assist you.</p><br>
+        </div>
+
+        <div class="container">
+            <div id="initial">
+            <form action="mailto:ishrathinaam@gmail.com" method="post" enctype="text/plain">
+                <label for="fname">First Name: </label>
+                <input type="text" id="fname" name="fname">
+                <br>
+                <label for="lname">Last Name: </label>
+                <input type="text" name="lname" id="lname">
+                <br>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+                <br>
+                <label for="query">Query Details: </label>
+                <textarea name="query" id="query" cols="30" rows="4"></textarea>
+                <p>Query subject: </p>
+                <input type="radio" name="theme" value="sport" id="sport">
+                <label for="sport">Regarding a Sport</label> <br>
+                <input type="radio" name="theme" value="commerce" id="commerce">
+                <label for="commerce">Regarding Online-Purchase</label> <br>
+                <input type="radio" name="theme" value="website" id="website">
+                <label for="website">Regarding our Website</label>
+                <br><br>
+                <input type="button" value="View Query" onclick="viewQuery();">
+            </div>
+            <div id="replacement" class="hide">
+                <p id="review1"></p>
+                <p id="review2"></p>
+                <p id="review3"></p>
+                <p id="review4"></p>
+                <input type="button" value="Edit" onclick="editQuery();">&nbsp;&nbsp;
+                <input type="submit" name="send" value="Send" onclick="sendQuery();">
+            </div>
+            <div id="success" class="hide">
+                <p id="submitMessage">Success! Your query has been sent!</p>
+            </div>
+            </form>
+        </div>
+
+        <br><br><br>
+
+        <div class="contentSpacer">
+            <h2><a href="page_editor_i.html">Ishrath Inaam</a></h2>
+        </div>
+
+        <!-----footer----->
+        <link rel="stylesheet" href="footerstyle.css">
+    <div class="footer universal3">
+        <div class="container3">
+            <div class="row2">
+                <div class="footer_col1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app_logo">
+                        <img src="images/footer1.png">
+                        <img src="images/footer2.png">
+                    </div>
+                </div>
+                <div class="footer_col2">
+                    <img src="images/logo-3.png">
+                    <p>Our purpose is to substainably make the pleasure and benefits
+                    of sports accessible to the many.</p>    
+                </div>
+                <div class="footer_col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer_col4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,507 @@
+/*--------------- Navigation Bar ---------------*/
+.navbar {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar li {
+    float: left;
+    border-left: 2px solid white;
+    width: 14.04%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+    font-weight: bold;
+}
+
+/*--------------- Webpage Content ---------------*/
+.contentSpacer {
+    padding-left: 2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contentSpacer dt {
+	padding-left: 2%;
+    font-size: 16px;
+	max-width: 1150px;
+}
+
+.contentSpacerButton {
+	background-color: #04AA6D;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+	margin-left: 42%;
+}
+
+h2 {
+    font-size: 20px;
+    text-decoration: underline;
+	color: black;
+}
+
+h1 {
+    margin-top: 90px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 32px;
+	color: black;
+}
+
+body {
+    background-image:url("images/background-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+
+/*--------------- Form  ---------------*/
+.container {
+    border-radius: 5px;
+    background-color: #c2f7e9;
+    padding: 10px;
+    width: 26%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 39%;
+}
+
+.alertRed {
+    background-color: rgb(199, 118, 118);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/*----------- thumbnail  image css ------------- */
+h4{
+	color:blue;
+	font-size:25px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin-left:20px;
+	
+}
+
+h3{
+	color:black;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size:25px;
+}
+
+h5{
+	letter-spacing: 3px;
+	font-size: 15px;
+	color:black;
+    font-weight: bold;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+}
+
+.content {
+    background-color: white;
+    padding: 50px;
+    align-items: center;
+  }
+  
+.next{
+    max-width: 1000px;
+    margin: auto;
+  }
+.selectbox{
+	display:inline;
+	align-items:center;
+}
+
+.selectbox2{
+	align-items:center;
+}
+
+.A:hover {
+  box-shadow: 0 0 5px 6px rgba(15, 17, 167, 0.5);
+}
+
+.B:hover {
+	box-shadow: 0 0 5px 6px rgba(15, 17, 167, 0.5);
+}
+
+.C:hover {
+	box-shadow: 0 0 5px 6px rgba(15, 17, 167, 0.5);
+}
+
+.D:hover {
+	box-shadow: 0 0 5px 6px rgba(15, 17, 167, 0.5);
+}
+
+.E:hover {
+	box-shadow: 0 0 5px 6px rgba(15, 17, 167, 0.5);
+}
+
+.A,.B,.C,.D,.E{
+	padding:5px;
+	border: 1px sloid white;
+	border-radius:15px;
+    align-items: center;
+	display:inline-grid;
+}
+
+p{
+    font-weight: bold;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+}
+
+.viewport {
+	display: inline-block;
+	float:none;
+}
+
+/*-------------- svg css ----------------- */
+.home {
+	height: 60px;
+	margin: 0 auto;
+	position: absolute;
+	top: 11%;
+	right: 600px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+  
+.Queries {
+	height: 60px;
+	margin: 0 auto;
+	position: absolute;
+	top: 34.5%;
+	right: 1200px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+  
+.buyproduct {
+	height: 60px;
+	margin: 0 auto;
+	position: absolute;
+	top: 34.5%;
+	right: 1000px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+
+.site {
+	height: 60px;
+	margin: 0 auto;;
+	position: absolute;
+	top: 34.5%;
+	right: 800px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+
+.quiz {
+	height: 60px;
+	margin: 0 auto;;
+	position: absolute;
+	top: 34.5%;
+	right: 600px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+
+.Thumbnail {
+	height: 60px;
+	margin: 0 auto;;
+	position: absolute;
+	top: 34.5%;
+	right: 0px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+
+.cricket1{
+	height: 60px;
+	margin: 0 auto;
+	position: absolute;
+	top: 49.5%;
+	right: 268px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+
+.Tennis2{
+	height: 60px;
+	margin: 0 auto;
+	position: absolute;
+	top: 60%;
+	right: 268px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+
+.Football3{
+	height: 60px;
+	margin: 0 auto;
+	position: absolute;
+	top: 71%;
+	right: 268px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+
+.Rugby4 {
+	height: 60px;
+	margin: 0 auto;
+	position: absolute;
+	top: 81.5%;
+	right: 268px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+
+.swimming5 {
+	height: 60px;
+	margin: 0 auto;
+	position: absolute;
+	right: 265px;
+	bottom: 0px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+
+.student {
+	height: 60px;
+	margin: 0 auto;
+	position: absolute;
+	top: 34.5%;
+	right: 300px;
+	transform: translateY(-50%);
+	width: 320px;
+}
+
+.topic {
+	color:white;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 22px;
+	letter-spacing: 4px;
+	line-height: 32px;
+	position: relative;
+	top: -48px;
+}
+
+.page{
+	border-style: none;
+	stroke-width: 6;
+	stroke:black;fill: navy;
+	stroke: midnightblue;
+	fill-opacity:0.5;
+	stroke: opacity 2;
+}
+
+ /*  Lines  */
+.downLine2{
+  position: absolute;
+  top: 38.4%;
+  right: 150px;
+  stroke: midnightblue;
+  stroke-width:3px;
+}
+
+.downMain{
+  position: absolute;
+  stroke:midnightblue;
+  top: 13.7%;
+  right: 170px;
+  stroke-width:3px;
+}
+
+/*----------------- Quiz ----------------*/
+#button1 {
+	width: 500px; 
+	display: block;
+	margin: auto;
+	background-color:#76d7c8 ;
+	border: none;
+	cursor:pointer;
+	border-radius:20px;
+}
+  
+#button1:hover {
+	background-color:black ;
+	color:white;
+}
+	 
+#submitted {
+	visibility: hidden;
+	text-align: center;
+	  
+}
+
+/*------------------------ Student Details -----------------*/
+.universal {
+	box-sizing: border-box;
+}
+	
+.s3_body {
+	margin: 0;
+	font-family: Arial;
+	background-color: rgb(159, 147, 229);
+}
+	
+
+.column {
+	float: left;
+	width: 23%;
+	padding: 10px;
+}
+	
+
+.column img {
+	opacity: 0.8; 
+	cursor: pointer; 
+}
+	
+.column img:hover {
+	opacity: 1;
+}
+	
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+	
+
+.container1 {
+	position:relative;
+	display: none;
+	align-items: center;
+}
+	
+
+#imgtext {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	color: white;
+	font-size: 20px;
+}
+	
+
+.closebtn {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	color: white;
+	font-size: 35px;
+	cursor: pointer;
+}
+
+/*----------------- Sports History page ---------------*/
+.historyBox {
+	position: relative;
+	max-width: 1150px;
+	padding: 50px;
+	background: rgba(255,255,255,.2);
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	margin-top: 80px;
+	margin-left: 8%;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.historyIntro, .historyFooter {
+	position: relative;
+	max-width: 2000px;
+	padding: 50px;
+	background: rgba(255,255,255,.2);
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	margin-top: 100px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.historyIntro dd {
+	margin-left: 100px;
+	color: black;
+	font-size: 16px;
+	display: inline;
+}
+
+.historyFooter dt {
+	margin-left: 80px;
+	color: black;
+	font-size: 20px;
+	display: inline;
+}
+
+.historyIntro a, .historyFooter a {
+	display: inline;
+	text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 16px;
+}
+.historyIntro a{
+	margin-right: -50px;
+}
+
+.historyIntro a:hover, .historyFooter a:hover {
+	background-color: white;
+}
+
+.historyBox dd {
+	color: black;
+	font-size: 16px;
+}
+
+.historyBox dt, .historyIntro dt {
+	color: #111;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.historyBox img {
+	margin: 20px;
+	margin-left: 130px;
+}

@@ -1,0 +1,291 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset = "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Universal Sports</title>
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="icon" href="images/logo-3.png">
+<style>
+	.Page_editor{
+    color: black;
+  }
+  .selectBox,.selectbox2{
+	  margin-left: 600px ;
+  }
+</style>
+</head>
+
+<body>
+<div class="contentspacer">
+	<h1><b> Welcome to Universal Sports</b></h1>
+</div>
+<div class="navbar">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="query.html" > Query</a></li>
+		<li><a href="buyproducts.html">Buy-products</a></li>
+		<li><a href="Sitemap.html">Site-Map</a></li>
+		<li><a href="Quiz.html">Quiz</a></li>
+		<li><a href="Thumbnailimage.html" class="active">Thumbnail-Images</a></li>
+		<li><a href="StudentDetails.html">Student Details</a></li>
+	</ul>
+</div>
+<br><br>
+
+<h3><b> Click Image to see more details</b></h3>
+
+
+
+<a target="_self" href="#content1">
+	<img class="A" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  src="images/cricket.jpg" alt="cricket"  width="250" height="200" >
+   </a>
+   
+  
+   <a target="_self" href="#content2">
+	 <img class="B" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  src="images/tennis.jpg" alt="Tennis"  width="270" height="200">
+   </a>
+   
+
+   <a target="_self" href="#content3">
+	 <img class="C" onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/football.webp" alt="football"  width="270" height="200">
+   </a>
+
+   <a target="_self" href="#content4">
+	 <img class="D" onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/rugby.jpg" alt="rugby"  width="270" height="200">
+   </a>
+
+   <a target="_self" href="#content5">
+	 <img class="E" onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/swimming.jpg" alt="swimming" width="270" height="200">
+   </a>
+  
+
+
+<br><br>
+ 
+
+<div id="two">
+<div class="selectBox">
+<div class="heading"><h5 id="bc">Select Background Color:</h5></div>
+	<select id="bgColor" onchange="color(this.value)">
+		<option value=""> Select background color</option>
+		<option value="#00ffcc">Bright Turquoise</option>
+		<option value="#ccccff">lavender Blue</option>
+		<option value="#34495e">Dark Blue</option>
+		<option value="#DE3163">Red</option>
+		<option value="#ffff66">Laser Lemon</option>
+		<option value="#ff99cc">Carnation Pink</option>
+	</select>
+</div>
+</div>
+
+
+<div class="selectbox2">
+<div class="heading"><h5 id="fc">Select the Font Colour:</h5></div>
+	<select id="fccolor" class="drpDown" onchange="backgroundDrop()">
+	<option class="font" value=""> Select font color</option>
+	<option class="font" value="black">Black</option>
+	<option class="font" value="red">Red</option>
+	<option class="font" value="green">green</option>
+	<option class="font" value="blue">Blue</option>
+	</select>
+</div>
+
+
+
+
+<script>
+
+
+	function color(value){
+		var content_cricket = document.getElementById("content_cricket")
+		content_cricket.style.backgroundColor=value;
+		var content_tennis = document.getElementById("content_tennis")
+		content_tennis.style.backgroundColor=value;
+		var content_football = document.getElementById("content_football")
+		content_football.style.backgroundColor=value;
+		var content_rugby= document.getElementById("content_rugby")
+		content_rugby.style.backgroundColor=value;
+		var content_swimming = document.getElementById("content_swimming")
+		content_swimming.style.backgroundColor=value;
+		
+	}
+
+	function backgroundDrop(){
+			var selectedtxtColor = document.getElementById("fccolor").value;
+				console.log(selectedtxtColor);
+			if (selectedtxtColor == "black") {
+					document.body.style.color = selectedtxtColor;
+					
+					
+				}else
+			if (selectedtxtColor == "red") {	
+					document.body.style.color = selectedtxtColor;
+					//removeProperty();
+				}else
+			if (selectedtxtColor ==  "green") {	
+				document.body.style.color = selectedtxtColor;
+				//removeProperty();
+				}else
+			if (selectedtxtColor == "blue") {	
+					document.body.style.color = selectedtxtColor;
+					//removeProperty();
+					}else {
+					document.body.style.color != selectedtxtColor;
+					//removeProperty();
+					}
+	}
+
+
+	            function bigImg(x) {
+                x.style.height = "300px";
+                x.style.width = "350px";
+}
+
+                function normalImg(x) {
+                x.style.height = "200px";
+                x.style.width = "270px";
+}
+		
+</script>
+<br><br><br><br><br><br>
+<div id="next" class="next">
+
+    <div id="content1">
+    <div id="content_cricket" class="content">
+      <img src="Images/cricket.jpg" alt="cricket" style="width:95%">
+      <h4>Cricket</h4>
+      <p>
+        Cricket is a sport which is played between two teams of eleven players each. One team, which is batting, tries to score runs, while the other team is fielding, and tries to prevent this. <br>Runs are scored by hitting the ball, which is thrown by a player from the fielding team to a player from the batting team, across the boundary, or by the two batting players running back-and-forth between the two wickets.
+
+        The wickets are sets of three small, wooden posts that are at each end of a rectangle of short grass called 'the pitch', which is 22 yards long. <br>The pitch is inside a much larger oval of grass called the 'area of play'. The area of play is a 30 yard circle inside the cricket ground or stadium. The fielding team can attempt to get batting players "out" in a number of ways.,<br> When a player is out, a teammate will replace them in the field. When a team no longer has two "not-out" players left to score, then the other team gets the chance to try to score. 
+        <br>In shorter games of cricket, a team may also have to stop batting when the ball has been thrown to their players a certain number of times. After both teams have had enough chances to score, the team with the most runs wins.
+        
+        The game started to gain popularity in England in the 16th century. The earliest definite reference to the sport is in a court case of 1598. The Guildford court heard John Derrick, a coroner, that fifty years earlier, "he and diverse of his fellows did run and play [on the common land] at cricket". Later, the game spread to countries of the British Empire in the 19th and 20th centuries.
+        
+        <br>, it is a popular sport in England, Australia, India, Pakistan, Sri Lanka, Bangladesh, South Africa, New Zealand, the West Indies and several other countries such as Afghanistan, Ireland, Kenya, Scotland, the Netherlands, and Zimbabwe.
+      </p>
+    
+    </div>
+    </div>
+
+<br><br>
+<div id="content2">
+<div id="content_tennis" class="content">
+  <img src="Images/tennis.jpg" alt="Tennis" style="width:95%">
+  <h4>Tennis</h4>
+  <p>
+    Tennis is a sport played with a felt-covered rubber ball, a tennis racket, and a court. Since 1998, every September 23 has been called "Tennis Day". Tennis’s official name is "lawn tennis".
+
+    First, early in the 11th century, players in France played a sport like this with their hands. It was called “Jeu de Paume”.<br> In the 15th century the players played with rackets. Now it is called “tennis”. It became popular in England and France. King Henry III of France was a big fan of the game. This kind of sport is still played but is known as real tennis ("real" here meaning "royal"). The sport of "lawn tennis" played on grass courts was invented in mid 19th-century England and later spread into many other countries.The name of the sport is usually shortened to "tennis".
+    There are many different kinds of courts, like grass, clay or hard court. The goal of tennis is to hit the ball over the net into the other player’s court. When the other player cannot return the ball, a point is won. <br>The game is played with two or four people. When it is played with two people, it is called “singles”, and when it is played with four people, it is called “doubles”. The court has "alleys" on each side, which are "fair" territory when playing doubles.
+
+     A tennis game has a number of sets. Each set has a number of games, and each game has points. The points are counted love (0, after the French l'oeuf), fifteen (15), thirty (30), and forty (40). If both players get to forty, the score is deuce from which 2 more points are needed to win the game. When one player reaches six games, it is one set. If it is a three-set match, the player who wins two sets first is the winner. If the game count reaches 5–5, the set must be won with two more games than the other player, like 7–5 or 8–6. If the game count gets to 6–6, a "tiebreaker" is played. In a tiebreak, players have to get at least seven points while getting two more points than the other player to win the set. In tiebreak points are called “one,” “two,” etc.
+  </p>
+
+</div>
+</div>
+<br><br>
+
+<div id="content3">
+<div id="content_football" class="content">
+  <img src="Images/football.webp" alt="Football" style="width:95%">
+  <h4>Football</h4>
+<p>
+    Football is a word which could mean one of several sports. The best-known type of football is association football. This is called "soccer" in North America, South Africa, and Australia to avoid confusion with other types of football that are commonly played there.
+
+    The name football comes from the two words 'foot' and 'ball'. It is named football because the players of the game walk and often run (on their feet) while playing, as opposed to (for example) polo where the players ride horses. Football is played using a ball, also called a 'football', that is usually shaped like a sphere or an ellipsoid. The ball is often kicked with the foot, but depending on the game, it can also be hit using other parts of the body (in association football) and handling the ball is a part of some other sports known as 'football'. Players can use any part of their body except their arms and hands. Goalies can use every part of their body to keep the ball out of the goal.<br>
+    
+    Some elements of football have been seen in many countries, dating back to the second and third century AD in China. The modern games of both rugby football and association football comes from 19th-century England. Kicking a ball, in Europe, was described in Britannia (now western scottish lowlands), in Germania (now Deutchland) and Gallia (now France and northern-central Italy).[3] An evolution goes back to the Middle Ages in Paris.[4] Association football (founded in Richmond, London at the end of 1800) spread to many other parts of Europe, and was brought to the rest of the world with colonization. Today, it is the most popular sport in the world and many people watch it on television, especially the FIFA World Cup that happens every four years.<br>
+    
+    Every year there is a Football Club Competition called as Champions League. All the qualified big teams take part. At the end, we have one winner who takes the prestigious UEFA trophy. All big players play for their own teams. Some big players who take part every year are Mbappe, Ronaldo, Messi, Dybala, Neymar and many more.
+</p>
+
+</div>
+</div>
+<br><br>
+
+<div id="content4">
+<div id="content_rugby" class="content">
+  <img src="Images/rugby.jpg" alt="Rugby" style="width:95%">
+  <h4>Rugby</h4>
+<p>
+    Rugby was invented in the early 19th century as a variation on football. It is a team sport where each player can really go all out. Rugby is a 15-a-side team sport. The object of the game is to ground the ball behind the opponent's try line, into what is called the in-goal area. Rugby is played both with the ball in hand and by kicking the ball. However, when the ball is being carried in hand it can only be thrown or handed off backwards. <br> is because it is the progress of the player and not the ball that is decisive in this sport. That is one difference between rugby and American football, although the two are often confused among laypeople.
+
+It is a sport anyone who has a pair of football boots, sports gear and a mouth guard can play. But before getting started, these players at the Frankfurt Rugby Club practice a bit of technique, as coordination and ball control are essential in this sport. <br>Rugby is a full-contact sport. You have to learn to bring down your opponent. This takes toughness. Strength, craftiness and body control are of the essence.
+
+This is what is called a scrum. After many rule infringements play is often restarted with a scrum. The forwards on each team crouch and bind together. They then shove and push each other to get to the ball, which is thrown into the scrum from the side.<br>
+
+The ball is thrown in and the forwards lift one of their teammates above the scrum, he, in turn, tries to catch the ball and pass it to a teammate. This is called a line-out and is done when the ball has gone into touch. During the scrimmage at the end of practice there is no tackling, that is no body contact. This is to keep these novices from getting injured. Here, this player finds the right spot, catches the ball and grounds the ball in the in-goal area. Even beginners can score points. Getting into rugby is easy. Anyone can play, and the younger you start the better.<br> Starting as a child is ideal as rugby is the perfect sport for getting super fit.
+</p>
+
+</div>
+</div>
+<br><br>
+
+<div id="content5">
+<div id="content_swimming" class="content">
+  <img src="Images/swimming.jpg" alt="Swimming" style="width:95%">
+  <h4>Swimming</h4>
+  <p>
+    swimming, in recreation and sports, the propulsion of the body through water by combined arm and leg motions and the natural flotation of the body. Swimming as an exercise is popular as an all-around body developer and is particularly useful in therapy and as exercise for physically handicapped persons. It is also taught for lifesaving purposes. For activities that involve swimming, see also diving, lifesaving, surfing, synchronized swimming, underwater diving, and water polo.<br>
+    Internationally, competitive swimming came into prominence with its inclusion in the modern Olympic Games from their inception in 1896. Olympic events were originally only for men, but women’s events were added in 1912. Before the formation of FINA, the Games included some unusual events. In 1900, for instance, when the Games’ swimming events were held on the Seine River in France, a 200-metre obstacle race involved climbing over a pole and a line of boats and swimming under them. Such oddities disappeared after FINA took charge. Under FINA regulations, for both Olympic and other world competition, race lengths came increasingly to be measured in metres, and in 1969 world records for yard-measured races were abolished.<br> The kinds of strokes allowed were reduced to freestyle (crawl), backstroke, breaststroke, and butterfly. All four strokes were used in individual medley races. Many nations have at one time or another dominated Olympic and world competition, including Hungary, Denmark, Australia, Germany, France, Great Britain, Canada, Japan, and the United States.
+  </p>
+
+</div>
+</div>
+<br><br>
+<div>
+	<a href="Page_editor_s.html" class="Page_editor"><b>Ewanthi Shenara</b></a>
+</div>
+
+
+
+</div>
+
+<!-----footer----->
+<link rel="stylesheet" href="footerstyle.css">
+<div class="footer universal3">
+	<div class="container3">
+		<div class="row2">
+			<div class="footer_col1">
+				<h3>Download Our App</h3>
+				<p>Download App for Android and ios mobile phone.</p>
+				<div class="app_logo">
+					<img src="images/footer1.png">
+					<img src="images/footer2.png">
+				</div>
+			</div>
+			<div class="footer_col2">
+				<img src="images/logo-3.png">
+				<p>Our purpose is to substainably make the pleasure and benefits
+				of sports accessible to the many.</p>    
+			</div>
+			<div class="footer_col3">
+				<h3>Useful Links</h3>
+				<ul>
+					<li>Coupons</li>
+					<li>Blog Post</li>
+					<li>Return Policy</li>
+					<li>Join Affiliate</li>
+				</ul>
+			</div>
+			<div class="footer_col4">
+				<h3>Follow us</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Instagram</li>
+					<li>Twitter</li>
+					<li>Youtube</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+
+</html>

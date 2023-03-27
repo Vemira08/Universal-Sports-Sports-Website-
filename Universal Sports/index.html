@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="home" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>Universal Sports</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="icon" href="images/logo-3.png">
+        
+    </head>
+    <body>
+        
+        <div class="contentSpacer">
+            <h1>Welcome to Universal Sports</h1>
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="query.html">Query</a></li>
+                <li><a href="buyproducts.html">Buy-Products</a></li>
+                <li><a href="Sitemap.html">Site-Map</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="Thumbnailimage.html">Thumbnail-Images</a></li>
+                <li><a href="StudentDetails.html">Student-Details</a></li>
+            </ul>
+        </div>
+
+    <!-- Slide Show -->
+        <center>
+            <section>
+                <img class="mySlides" src="images/cricket_slide.jpg" style="width:80%">
+                <img class="mySlides" src="images/tennis_slide.jpg" style="width:80%">
+                <img class="mySlides" src="images/football_slide.jpg" style="width:80%">
+                <img class="mySlides" src="images/rugger_slide.jpg" style="width:80%">
+                <img class="mySlides" src="images/swimming_slide.webp" style="width:80%">
+            </section>
+        </center>
+
+        <br><br><br><br><br>
+
+        <script>
+            // Automatic Slideshow - change image every 3 seconds
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+
+                if (myIndex > x.length) {myIndex = 1}
+                    x[myIndex-1].style.display = "block";
+                    setTimeout(carousel, 3000);
+                }
+        </script>
+
+    <div class="contentSpacer">
+
+        <h2 id="Home">Home</h2><br>
+            <dl>
+                <dt>Welcome to <em>Universal Sports</em> Sri Lanka's fastest growing online sports store. There is a huge range to select from encompassing all the major sports and some of the more specialists ones too. We have an extensive range of contacts across the industry so if there is anything you are looking for but can't find please let us know using our query function and we will do our best to source it for you. <br> <br>
+
+                <em>Universal Sports</em> has been designed to be as easy to navigate for you as possible. You can rest assured you're in safe hands as we use Sri Lanka's number one payment processing service to ensure all transactions are completely secure.</dt> <br>
+            </dl> <br>
+
+        <h2 id="History">History</h2>
+            <dl>
+                <dt>The main sports we specialize in are: <em>Football</em>, <em>Cricket</em>, <em>Rugby</em>, <em>Swimming</em> and <em>Tennis</em>. Therefore, as to provide more insight into these sports we have dedicated a page for you to go through the history of these sports. <br><br>
+        
+                This will allow our audience such as competitive athletes and even sports enthusiasts (who love and devote their time and efforts to the sports) to understand the origin and nature of how the sports were created and how it has evolved over-time to what it is now.
+                </dt> <br>
+            </dl> <br>
+
+        <button class="contentSpacerButton" onclick="document.location='history.html'">The History of Sports</button> <br><br>
+
+        <h2 id="About Us">About Us</h2>
+            <dl>
+                <dt>To introduce ourselves we are computer science and engineer students who are both excited and interested in sports; actively engaged in sports. Therefore we used this passion to build a website to support other athletes and empower their journeys to success. <br><br>
+                
+                If you would like to see what else we have done to make this website possible we have included links in the footer of this webpage that will provide you with further information regarding us. And as always stay safe and compete hard!</dt> <br>
+            </dl> <br>
+
+    </div>
+
+    <!-----footer----->
+    <link rel="stylesheet" href="footerstyle.css">
+    <div class="footer universal3">
+        <div class="container3">
+            <div class="row2">
+                <div class="footer_col1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app_logo">
+                        <img src="images/footer1.png">
+                        <img src="images/footer2.png">
+                    </div>
+                </div>
+                <div class="footer_col2">
+                    <img src="images/logo-3.png">
+                    <p>Our purpose is to substainably make the pleasure and benefits
+                    of sports accessible to the many.</p>    
+                </div>
+                <div class="footer_col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer_col4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    </body>
+</html>

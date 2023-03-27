@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border box;
+}
+body{font-family: 'Poppins', sans-serif;
+    background-image: url("images/present2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+
+
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    font-size: 50px;
+    font-family: 'Holtwood One SC', serif;
+}
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width : 85px;
+    height : 85px;
+    padding-bottom : 10px;
+    object-fit: cover;
+
+    
+}
+h2{
+    text-align: center;
+    padding: 25px;
+    font-weight: 2000;
+    font-family: 'Rammetto One', cursive;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.details{
+    color: #000;
+    font-weight: 500;
+}
+.content{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.member{
+    text-align: center;
+    padding: 30px 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0;
+}
+.member img{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}

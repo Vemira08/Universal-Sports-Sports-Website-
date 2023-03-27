@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="icon" href="images/logo-3.png">
+
+</head>
+
+<body class="s3_body">
+  <div class="universal"></div>
+  <div class="navbar">
+    <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="query.html">Query</a></li>
+        <li><a href="buyproducts.html">Buy-Products</a></li>
+        <li><a href="Sitemap.html">Site-Map</a></li>
+        <li><a href="Quiz.html" >Quiz</a></li>
+        <li><a href="Thumbnailimage.html">Thumbnail-Images</a></li>
+        <li><a href="StudentDetails.html" class="active">Student Details</a></li>
+    </ul>
+</div>
+<br>
+<br>
+<br>
+
+<div style="text-align:center">
+  <h2>STUDENT DETAILS</h2>
+  <p>---------------------</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column" style="margin-left: 25px;">
+    <img src="images/vemira.jpeg" alt="Vemira Nirmal , Student 1" style="width:100%" height="500" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/ishrath.jpeg" alt="Ishrath Inam , Student 2" style="width:100%"  height="500" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/sahas.jpeg" alt="Sahas Himsara , Student 3" style="width:100%"  height="500" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/shenara.jpeg" alt="Ewanthi Shenara , Student 4" style="width:100%"  height="500" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container1" style="margin-left: 300px;" >
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img src="#" alt="student(1,2,3,4)" id="expandedImg" style="width:70%" >
+  <div id="imgtext" style="color: rgb(49, 124, 173);"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+<div>
+  <a href="page_editor_h.html" class="page_editor"><b>Sahas Himsara</b></a>
+</div>
+
+<!-----footer----->
+<link rel="stylesheet" href="footerstyle.css">
+<div class="footer universal3">
+    <div class="container3">
+        <div class="row2">
+            <div class="footer_col1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app_logo">
+                    <img src="images/footer1.png">
+                    <img src="images/footer2.png">
+                </div>
+            </div>
+            <div class="footer_col2">
+                <img src="images/logo-3.png">
+                <p>Our purpose is to substainably make the pleasure and benefits
+                of sports accessible to the many.</p>    
+            </div>
+            <div class="footer_col3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer_col4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
